@@ -31,7 +31,7 @@ jobs:
           context: .
           file: WebApplication1/Dockerfile
           push: true
-          tags: nleeafor/argocd-course-webapp:${{ github.event.pull_request.head.sha }}
+          tags: nleeafor/argocd-course-webapp:${{ github.sha }}
   update-image-tag-in-helm:
     runs-on: ubuntu-latest
     needs: docker-build-push
